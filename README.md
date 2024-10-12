@@ -4,7 +4,7 @@
 
 In this notebook, we will be exploring a heart disease dataset to analyze and predict the likelihood of heart disease in patients using interpretable machine learning models. The dataset, which comes from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/45/heart+disease) and [Kaggle](https://www.kaggle.com/datasets/ketangangal/heart-disease-dataset-uci), contains 1025 observations and 14 features, including attributes such as age, cholesterol levels, and exercise-induced angina. The goal is to predict the presence or absence of heart disease based on these medical indicators.
 
-To build interpretable models for this task, we will be using three distinct models from the `imodels` package, each of which offers interpretability in its own way:
+To build interpretable models for this task, we will be using three distinct models from the `imodels` package, each of which offers interpretability in its own way. I created diagrams for each of the model to help explain the model inner structures:
 1. **RuleFit**: This model generates a combination of decision tree-based rules (via gradient boosting) and a linear model with Lasso regularization to select the most important rules and features for prediction. It balances model complexity and interpretability by choosing a sparse set of rules that are easy to understand.
 
 <img width="595" alt="Screen Shot 2024-09-25 at 3 57 46 PM" src="https://github.com/user-attachments/assets/95592965-28ec-47cb-8b8b-a14d25914ab3">
