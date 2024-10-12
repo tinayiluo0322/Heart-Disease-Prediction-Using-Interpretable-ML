@@ -13,8 +13,13 @@ To build interpretable models for this task, we will be using three distinct mod
 
 <img width="589" alt="Screen Shot 2024-09-25 at 4 12 32 PM" src="https://github.com/user-attachments/assets/b550d577-1324-4c67-8f05-cfee8643a07e">
 
-3. **OptimalTreeClassifier**: This model aims to build optimal decision trees that balance classification accuracy and tree complexity. It has two approaches: GOSDT, which is a globally optimal sparse decision tree algorithm that provides an optimal solution by minimizing error and complexity, and **GreedyTreeClassifier** (CART), which uses a greedy algorithm similar to standard decision trees to find locally optimal splits.
-
+3. **OptimalTreeClassifier**: This model aims to build optimal decision trees that balance classification accuracy and tree complexity. It has two approaches:
+- **GOSDT**: A globally optimal sparse decision tree algorithm that minimizes both error and complexity, providing an optimal solution.
+- **GreedyTreeClassifier (CART)**: A greedy algorithm similar to standard decision trees, which finds locally optimal splits to build the tree.
+  
 <img width="597" alt="Screen Shot 2024-09-25 at 5 12 11 PM" src="https://github.com/user-attachments/assets/cd8b9c06-f850-4658-bd0a-6c4fd2881b20">
 
-Each of these models will help us not only predict the presence of heart disease but also provide valuable insights into the underlying factors that contribute to the prediction, making the models interpretable and useful in a medical context.
+Even though the OptimalTreeClassifier includes the GOSDT approach, at the end of the notebook, I also implemented GOSDT through a standalone Python package for more direct control over the model configuration and performance. This allows for a more thorough exploration of GOSDT's capabilities in generating interpretable decision trees.
+
+Each of these models will help us not only predict the presence of heart disease but also provide valuable insights into the underlying factors contributing to the prediction, making the models interpretable and useful in a medical context.
+
